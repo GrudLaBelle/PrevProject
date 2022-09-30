@@ -1,0 +1,731 @@
+/*-------------------
+
+[Fonts import]
+
+---------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*--------------------
+
+[reset handmade]
+
+----------------------*/
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+	padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: var(--white);
+}
+
+/*----------------------
+
+[variables]
+
+------------------------*/
+
+:root {
+    --white: #f9f9f9;
+    --blue: #3bc0fd;
+    --grey: #DADADA;
+    --black: #000000;
+    --red: 253, 100, 87;
+    --green: 150, 253, 87;
+    --main-font: 'Roboto', sans-serif;
+}
+
+/*-----------------------
+
+[common css]
+
+--------------------------*/
+
+body{
+    font-size: 1.6em;
+    background-color: var(--white);
+    font-family: var(--main-font);
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    border: 1px solid var(--black);
+    padding: 8px;
+}
+
+table td, table th {
+  border: 1px solid var(--black);
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--grey);
+}
+
+a {
+    font-size: 1em;
+}
+
+
+
+/*
+
+*************************
+
+header
+
+*************************
+
+*/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--blue);
+    box-shadow: 0px 0px 5px 0px var(--grey);
+}
+
+/*
+
+*************************
+
+navigation
+
+************************
+
+*/
+
+nav.navigation {
+    display: none;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.navigation a {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+nav.navigation.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+}
+ 
+nav.navigation.active li {
+    border-box: box-sizing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+/*
+
+*************************
+
+toggleBox
+
+*************************
+
+*/
+
+img.menu {
+    width: 50px;
+    height: 50px;
+}
+
+img.menu.hide {
+   display: none; 
+}
+
+.close {
+    filter: invert(1);
+}
+
+img.close {
+    display: none;
+}
+
+img.close.show {
+    display: flex;
+}
+
+/*
+
+*************************
+
+layout
+
+*************************
+
+*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2.5%;
+    width: 100%;
+    min-height: 68.5vh;
+}
+
+/*
+
+***************************
+
+home_view
+
+***************************
+
+*/
+ 
+.home {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--black);
+    text-align: center;
+}
+
+.home h1 {
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 96px;
+    text-align: center;
+}
+
+.home p {
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 76px;
+    text-align: center;
+}
+
+/*
+
+**************************
+
+about_view
+
+**************************
+
+*/ 
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--black);
+}
+
+.about h2 {
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 86px;
+    text-align: center;
+}
+
+.about p {
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+/*
+
+************************
+
+process_view
+
+************************
+
+*/
+
+.process {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+
+.process article p {
+    text-align: justify;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 2.5%;
+    padding: 2.5%;
+    background-color: var(--blue);
+    box-shadow: 1px 1px 5px 0px var(--grey);
+}
+
+.steps h3 {
+    justify-content: center;
+}
+
+.steps ul li {
+    justify-content: flex-start;
+}
+.steps article ul li {
+        list-style: none;   
+    }
+
+/*
+
+***************************
+
+login_view and sign_up_view
+
+****************************
+
+*/
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.info li {
+    list-style: none;
+    text-align: center;
+}
+
+.session {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 15%;
+    border-radius: 2.5%;
+    background-color: var(--blue);
+    box-shadow: 1px 1px 5px 0px var(--grey);
+    text-align: center;
+}
+
+.session label {
+    margin: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.article_session {
+    margin: 20px;
+    text-align: center;
+}
+
+#session_button {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5%;
+    align-items: center;
+}
+
+#session_button .button {
+    border-box: box-sizing;
+    margin: 5px;
+}
+
+.button {
+   background: var(--blue);
+   margin: 5px;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 8px;
+   vertical-align: middle;
+   font-size: 1em;
+   font-family: var(--main-font);
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#session_button p{
+    margin: 20px;
+    text-align: center;
+}
+
+/*
+
+**********************
+
+user_update
+
+**********************
+
+*/
+
+#session_button a {
+    margin: 1.5%;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#session_button article {
+    text-align: center;
+}
+
+#session_button a {
+    color: var(--black);
+}
+
+#button_delete {
+    background-color: rgba(var(--red), 0.8);
+}
+
+/*
+
+***********************
+
+enterprise
+
+***********************
+
+*/
+
+.form article {
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#user_enterprise_data_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#user_enterprise_data_delete {
+    background-color: rgba(var(--red), 0.8);
+}
+
+#user_enterprise_data_button a {
+    color: var(--black);
+    text-align: center;
+    background-color: rgba(var(--green), 0.8);
+}
+
+/*
+
+***********************
+
+user_list_admin
+
+***********************
+
+*/
+    
+#table_admin {
+    width: 100%;
+    border: none;
+  }
+
+#table_admin thead {
+    display: none;
+    }
+
+#table_admin th {
+    border: none;
+    }
+
+#table_admin tr, #table_admin td {
+    border: none;
+    }
+
+#table_admin tr {
+    margin-bottom: 8px;
+    }
+
+
+#table_admin td {
+    display: flex;
+    }
+
+#table_admin td::before {
+    content: attr(label);
+    font-weight: bold;
+    width: 120px;
+    min-width: 120px;
+    color: var(--black);
+    display: flex;
+}
+
+#table_admin tbody tr td a {
+    color: var(--black);
+}
+
+/*
+
+**************************
+
+footer
+
+***************************
+
+*/ 
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--blue);
+}
+
+footer a {
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+}
+
+
+
+/*----------------------------
+
+[BIG SCREEN]
+
+------------------------------*/
+    
+    
+    
+@media only screen and (min-width: 768px) {
+    
+    /*
+    
+    ***********************
+    
+    navigation
+    
+    ***********************
+    
+    */
+    
+    nav {
+        width: 100%; 
+        display: flex;
+    }
+    
+    nav.navigation {
+        width: 75%;
+        display: flex;
+        box-sizing: border-box;
+    }
+    
+    nav.navigation ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    div.toggleBox {
+        display: none;
+    }
+    
+    /*
+    
+    ************************
+    
+    process_view
+    
+    ************************
+    
+    */
+    
+    .steps h3 {
+        margin-right: 30px;
+    }
+    
+    .steps article {
+        width: 60%;   
+    }
+    
+    /*
+    
+    *************************
+    
+    login_view and sign_up_view
+    
+    *************************
+    
+    */
+    
+    .session {
+        display: flex;
+        flex-direction:column;
+    }
+    
+    #user_enterprise_data_button {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        padding:1%;
+        width: 100%;
+    }
+    
+    #user_enterprise_data_button button, #user_enterprise_data_button a {
+        box-sizing: border-box;
+        padding 3px;
+    }
+    
+    .button {
+        box-sizing: border-box;
+        width: 60%;
+    }
+    
+    /*
+    
+    ************************
+    
+    enterprise
+    
+    ************************
+    
+    */
+    
+    #user_enterprise_data {
+        padding: 2.5% 15%;
+    }
+    
+    #user_enterprise_data article {
+        width: 100%;
+        display: flex;
+        flex-direction: flex-start;
+        justify-content: space-between;
+        margin: 2% 0%;
+    }
+    
+    #user_enterprise_data_button .button {
+        width: 100%;
+    }
+
+    /*
+    
+    ************************
+    
+    user_list_admin
+    
+    ************************
+    
+    */
+    
+    #table_admin table {
+        display: table;
+        border-collapse: separate;
+        text-indent: initial;
+    }
+    
+    #table_admin thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+    
+    #table_admin tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+    
+    #table_admin th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: -internal-center;
+    }
+    
+    #table_admin tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+    
+    #table_admin td::before {
+        content: none;
+    }
+    
+    #table_admin td {
+        display: table-cell;
+        vertical-align: inherit;
+    }
+    
+}
+
+
+
+
